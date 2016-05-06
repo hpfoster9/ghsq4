@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		<script>
+			function signUpTeacher(name, password, callback)
+			{
+				$.ajax(
+				{
+					type: "POST",
+					url: "signUpTeacher.php",
+					data: 
+					{
+						Teachers_name: name,
+						Teachers_password: password
+					},
+					success: function(value)
+					{
+						if(typeof callback === "function")
+							callback($.parseJSON(value));
+					}
+				});
+			}
+
+			function addStudents(name, password, students, callback)
+			{
+				$.ajax(
+				{
+					type: "POST",
+					url: "addStudents.php",
+					data: 
+					{
+						Teachers_name: name,
+						Teachers_password: password,
+						Teachers_students: students
+					},
+					success: function(value)
+					{
+						if(typeof callback === "function")
+							callback($.parseJSON(value));
+					}
+				});
+			}
+
+			$(document).ready(function()
+			{
+				signUpTeacher('Ajax', '1234', function(data)
+				{
+					console.log(data);
+
+					addStudents('Ajax', '1234', '001007461', function(data2)
+					{
+						console.log(data2);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

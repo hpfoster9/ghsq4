@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div id="header"><img src="https://ct-greenwich.myfollett.com/aspen/images/logo.png"><div id="title">BlueWitch Low School 2015-2016
+
+
+</div>   <div id="henry">Henry and Ajax Q4</div></div>
+<img src="aspen.png" id="orange">
+    <link href="style.css" rel="stylesheet" type= "text/css"/>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    </head>
+</head>
+<body>
+
+<center>
+    <div id="new" style="background-color: white; width: 400px;">
+    <h1>Create a new account</h1>
+    
+    Username:<input type="text" id="signUpName"><br>
+    Password:<input type="text" id="signUpPassword"><br>
+    
+
+    <button type="button" onclick="signUp();">Submit</button>
+   <a href="index.html">Already have an account?</a>
+    </div>   
+    
+    
+    
+    
+    
+    <div id="new_teacher" hidden="true" style="background-color: white; width: 400px;">
+    
+    <h1>Add Students</h1>
+    
+    Student Name:<input type="text" id="signUpID"><br>
+    Grade in Class:<input type="text" id="signUpGrade"><br>
+    
+    <button type="button" onclick="addStudents();">Add Another Student</button> <button type="button" onclick="addStudents(); makeTable('gradeBookTable'); show('gradebook');">Finalize</button>
+ 
+    
+    
+    
+    </div>
+    
+    
+    
+    <div id="gradebook" hidden="true" style="background-color: white; width: 400px; ">
+    <h3>Gradebook</h3>
+            <center>
+        <table id="gradeBookTable">
+        <tr class="head">
+                <td style="font-weight: bold">Student</td>
+                <td style="font-weight: bold">Grade</td>
+        </tr>
+</table>
+</center>
+
+    </div>
+    
+    
+    
+    </center>
+    
+    
+    <script src="myjs.js">
+    
+    
+    </script>
+    
+    <style>
+
+    </style>
+    
+    </body>
+</html>
+    
+    
+    
+    
+  
